@@ -1,0 +1,71 @@
+generated: '2026-08-25'
+method: searched
+source: https://pypi.org/pypi/mobcrush/json
+name: Mobcrush client packages
+description: >-
+  Registry sweep for Mobcrush client libraries. Mobcrush Streaming, Inc. never ran a public
+  developer program and never published a first-party SDK to any package registry. The only
+  package carrying the name is a third-party community wrapper on PyPI, unmaintained since
+  2017, which wrapped the internal www.mobcrush.com/api/ web API that backed the Mobcrush
+  site and mobile apps. That API host has been unreachable since the domain's DNS delegation
+  went lame, so the package no longer functions. No `SDKs` pointer is emitted from this file:
+  there is no official first-party SDK to point at.
+
+official_sdk_count: 0
+package_count: 1
+
+registries_searched:
+- registry: npm
+  query: mobcrush
+  url: https://registry.npmjs.org/-/v1/search?text=mobcrush
+  status: 200
+  results: 0
+- registry: pypi
+  query: mobcrush
+  url: https://pypi.org/pypi/mobcrush/json
+  status: 200
+  results: 1
+- registry: rubygems
+  query: mobcrush
+  url: https://rubygems.org/api/v1/gems/mobcrush.json
+  status: 404
+  results: 0
+- registry: crates.io
+  query: mobcrush
+  url: https://crates.io/api/v1/crates/mobcrush
+  status: 403
+  results: 0
+  note: crates.io refused the unauthenticated probe (403); no crate observed by any other route.
+
+packages:
+- name: mobcrush
+  registry: pypi
+  url: https://pypi.org/project/mobcrush/
+  language: Python
+  official: false
+  official_basis: >-
+    Published by Jay Nagpaul, an individual unaffiliated with Mobcrush Streaming, Inc.; source
+    repository is github.com/jaynagpaul/mobcrush, not the company's github.com/Mobcrush
+    organization. Described by its own docs as "a basic wrapper for the Mobcrush API".
+  version: 0.1.0
+  published: '2017-05-10'
+  source_code: https://github.com/jaynagpaul/mobcrush
+  docs: https://mobcrush.readthedocs.io/en/latest/mobcrush.html
+  status: abandoned
+  note: >-
+    Single 0.1.0 release, 2017-05-10, never updated — roughly four years before the company was
+    acquired and its platform retired. Wrapped chatroom messaging and streamer lookup against
+    the internal Mobcrush web API. Non-functional today: every mobcrush.com name returns
+    SERVFAIL.
+
+first_party_repositories_checked:
+- url: https://github.com/Mobcrush
+  status: 200
+  public_repos: 9
+  note: >-
+    All nine public repositories are forks or demos of other people's projects (ftl-sdk,
+    obs-studio, MiNET, FireSharp, cloudwatch_exporter, prometheus-ecs-discovery,
+    gulp-inline-base64, mixpanel-osx-unofficial) plus one original sample, ReplayKitDemo — an
+    Objective-C demo aiding developers integrating Apple ReplayKit Live. None is a Mobcrush
+    client library and none is published to a package registry. Last push across the whole
+    organization: 2020-10-30.

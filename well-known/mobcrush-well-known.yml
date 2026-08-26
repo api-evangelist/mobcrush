@@ -1,0 +1,149 @@
+generated: '2026-08-25'
+method: probed
+source: https://mobcrush.com/
+name: Mobcrush well-known + contract discovery probe
+description: >-
+  Negative probe record for Mobcrush. Mobcrush Streaming, Inc. was acquired by Super League
+  Gaming (now Super League Enterprise, Inc.) on 2 June 2021 and the brand was retired into the
+  acquirer. The company domain mobcrush.com is still REGISTERED (NameCheap, registry expiry
+  2026-11-26) and still DELEGATED to four Amazon Route 53 name servers, but the hosted zone
+  behind that delegation has been deleted: every one of those name servers answers REFUSED, so
+  every public resolver returns SERVFAIL for mobcrush.com and for every subdomain under it.
+  No TCP connection to any Mobcrush host can be opened, which means no /.well-known/ path, no
+  spec path, and no agent-card path could be probed at the HTTP layer at all. This is a lame
+  delegation, not a 404 and not a parking lander — the distinction matters because the failure
+  is at DNS, one layer below anything HTTP could report. NO WellKnown, SecurityTxt, AgentCard,
+  LLMsTxt, MCPServer or OpenAPI pointer is emitted from this probe, and none should ever be
+  emitted from it in a later round.
+
+host_status:
+  host: mobcrush.com
+  controlled_by_provider: false
+  disposition: lame-delegation
+  registrar: NameCheap, Inc.
+  domain_created: '2013-11-26'
+  domain_updated: '2025-10-27'
+  domain_expires: '2026-11-26'
+  dnssec: unsigned
+  nameservers:
+  - ns-1122.awsdns-12.org
+  - ns-1880.awsdns-43.co.uk
+  - ns-447.awsdns-55.com
+  - ns-701.awsdns-23.net
+  resolver_result: SERVFAIL
+  resolver_extended_error: >-
+    EDE(22) No Reachable Authority at delegation mobcrush.com. / EDE(23) Network Error
+    205.251.193.191:53 returned REFUSED — observed identically on Google Public DNS (8.8.8.8),
+    Cloudflare (1.1.1.1) and Cloudflare DNS-over-HTTPS.
+  note: >-
+    Registration is live and the NS records are published at the .com registry, but the Route 53
+    hosted zone they point at no longer exists. Nothing resolves; nothing is reachable.
+
+dns_probes:
+- host: mobcrush.com
+  rrtype: A
+  resolver: 8.8.8.8
+  status: SERVFAIL
+- host: www.mobcrush.com
+  rrtype: A
+  resolver: 8.8.8.8
+  status: SERVFAIL
+- host: api.mobcrush.com
+  rrtype: A
+  resolver: 8.8.8.8
+  status: SERVFAIL
+- host: developer.mobcrush.com
+  rrtype: A
+  resolver: 8.8.8.8
+  status: SERVFAIL
+- host: docs.mobcrush.com
+  rrtype: A
+  resolver: 8.8.8.8
+  status: SERVFAIL
+- host: app.mobcrush.com
+  rrtype: A
+  resolver: 8.8.8.8
+  status: SERVFAIL
+- host: status.mobcrush.com
+  rrtype: A
+  resolver: 8.8.8.8
+  status: SERVFAIL
+
+hosts:
+- host: mobcrush.com
+  reachable: false
+  failure: dns-servfail
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+
+contract_discovery:
+  openapi:
+  - url: https://mobcrush.com/openapi.json
+    status: 0
+    result: unreachable
+  llms_txt:
+  - url: https://mobcrush.com/llms.txt
+    status: 0
+    result: unreachable
+  graphql: not-attempted-host-unreachable
+  mcp: not-attempted-host-unreachable
+  a2a_agent_card:
+  - url: https://mobcrush.com/.well-known/agent-card.json
+    status: 0
+    result: unreachable
+  - url: https://mobcrush.com/.well-known/agent.json
+    status: 0
+    result: unreachable
+  verdict: >-
+    No machine-readable contract found and none reachable. Wayback CDX confirms Mobcrush ran an
+    internal JSON web API under https://www.mobcrush.com/api/ (e.g. /api/broadcast/<id>) that
+    backed its own site and mobile apps between 2015 and 2020, but /api/ itself archived as 404
+    and no /developers, /docs, /swagger, /openapi or /api-docs path was ever captured — Mobcrush
+    never published a public developer program or a machine-readable specification.
+
+adjacent_hosts_checked:
+- host: mobcrush.tv
+  a_record: 192.64.119.148
+  https_status: 0
+  note: >-
+    Resolves to a NameCheap parking address and times out on 443. Not established as a
+    Mobcrush-controlled host; treated as unrelated and NOT wired as a pointer.
+- host: mobcrush.gg
+  a_record: null
+  note: does not resolve
+- host: mobcrush.io
+  a_record: null
+  note: does not resolve
+- host: www.superleague.com
+  https_status: 200
+  note: >-
+    Acquirer (Super League Enterprise, Inc.). Live, but /mobcrush returns 404 — the Mobcrush
+    brand is not carried forward as a product surface, so no successor API is attributable
+    to Mobcrush.
+- host: github.com/Mobcrush
+  https_status: 200
+  note: >-
+    "Mobcrush Streaming, Inc." GitHub organization — genuinely the company's, 9 public
+    repositories, all forks or demos (ftl-sdk, obs-studio, MiNET, cloudwatch_exporter,
+    prometheus-ecs-discovery, ReplayKitDemo). No first-party API contract, no OpenAPI, no
+    published SDK of its own. Last push 2020-10-30.
