@@ -22,6 +22,10 @@ description: >-
   mobcrush.com domain, while still registered, no longer resolves at all. This profile is
   retained as a historical record.
 url: https://raw.githubusercontent.com/api-evangelist/mobcrush/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Mobcrush ran a JSON web API at www.mobcrush.com/api/ that backed its own site and mobile apps, but it never published a developer portal, an API reference, a first-party SDK or any machine-readable sp"
+x-harvest-source-url: https://forgeglobal.com/mobcrush_stock/
 deliveryModel:
   model: library
   open_source: false
@@ -95,8 +99,6 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
-- type: Website
-  url: https://forgeglobal.com/mobcrush_stock/
 - type: GitHubOrganization
   url: https://github.com/Mobcrush
 - type: Packages
