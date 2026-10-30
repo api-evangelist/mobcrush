@@ -64,5 +64,34 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Mobcrush is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/mobcrush_stock/
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
+
+Mobcrush Streaming, Inc. was a Santa Monica, California live-streaming technology company, founded in 2013 by Royce Disini with James Hurley, Travis Rogers and Stephen Dao, that made it possible for mobile gamers to broadcast gameplay straight from an iOS or Android device with no capture card, no desktop encoder and no third-party software. Its differentiator was simulcast: a creator went live once and Mobcrush relayed the same broadcast simultaneously to Twitch, YouTube, Facebook, Twitter and Periscope at no extra charge, which turned the product from a competing destination into distribution infrastructure for creators who already had audiences elsewhere. The company added an advertising and sponsorship layer in 2018 ("Go Live, Get Paid") and operated Mineville, one of six official Minecraft server partners under agreement with Microsoft, reaching more than twenty million players a year. It raised roughly $35.9M across its rounds, including an $11M Series A in September 2015 led by Kleiner Perkins Caufield & Byers and a $20M round in 2016, with First Round Capital and Lowercase Capital also participating. Super League Gaming announced its acquisition of Mobcrush on 11 March 2021 and closed it on 2 June 2021 for approximately 12.6 million shares of common stock; the acquirer now trades as Super League Enterprise, Inc. and does not carry the Mobcrush brand forward as a product. Mobcrush ran a JSON web API at www.mobcrush.com/api/ that backed its own site and mobile apps, but it never published a developer portal, an API reference, a first-party SDK or any machine-readable specification, so there is no public API surface to catalog — and the mobcrush.com domain, while still registered, no longer resolves at all. This profile is retained as a historical record.
+
+**Areas:** Company · Defunct · Acquired · Gaming · Live Streaming · Video · Mobile · Creator Economy · Media · Advertising
+
+## Mobcrush on APIs.io (historical record)
+
+Everything profiled for Mobcrush is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mobcrush/](https://apis.io/providers/mobcrush/)** — or go straight to one of the APIs or properties below.
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [GitHub](https://github.com/Mobcrush)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mobcrush: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mobcrush/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
